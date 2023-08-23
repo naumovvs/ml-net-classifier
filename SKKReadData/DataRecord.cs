@@ -31,9 +31,13 @@ namespace SKKClassifier
             get
             {
                 return new float[] {
-                    Mean(TempSeq), Variance(TempSeq), Length(TempSeq),
-                    Min(TempSeq), Max(TempSeq),
+                    Length(TempSeq),
+                    // temperature
+                    Mean(TempSeq), Variance(TempSeq), 
+                    Min(TempSeq), Width(TempSeq),
+                    // light
                     Positives(LightSeq), // the number of non-zero values in light sequence
+                    // dates
                     (float)(DateSeq.Max() - DateSeq.Min()).TotalMinutes // total time span in minutes
                 };
             }
@@ -62,7 +66,7 @@ namespace SKKClassifier
 
         private float Max(List<float> seq)
         {
-            return seq.Min();
+            return seq.Max();
         }
 
         private float Mean(List<float> seq)
