@@ -141,7 +141,7 @@ List<DataRecord> PreprocessData(List<DataRecord> data, int length = 50)
 }
 
 
-List<DataRecord> drs = ReadFromXLSX("dataset_all.xlsx"); // rawData
+List<DataRecord> drs = ReadFromXLSX("dataset_all_vs.xlsx"); // rawData
 //Console.WriteLine($"#records read = {rawData.Count}");
 //List<DataRecord> drs = PreprocessData(rawData, length: 1000);
 Console.WriteLine($"#records selected = {drs.Count}");
